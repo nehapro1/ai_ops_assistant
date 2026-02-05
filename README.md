@@ -5,7 +5,13 @@ Built using FastAPI, Groq (Llama 3.3), and integrated third-party APIs.
 
 🏗️ Architecture Overview
 
-The system follows a Multi-Agent Orchestration pattern to ensure modularity, scalability, and reliability.
+The system follows a Multi-Agent Orchestration pattern to ensure:
+
+Modularity
+
+Scalability
+
+Reliability
 
 🧠 Planner Agent
 
@@ -34,18 +40,17 @@ Matches the original user query
 Is complete and accurate
 
 🛠️ Integrated APIs
-
-Open-Meteo API
+🌦️ Open-Meteo API
 
 Provides real-time weather data
 
-GitHub Search API
+🧑‍💻 GitHub Search API
 
 Fetches top repositories based on:
 
-Star count
+⭐ Star count
 
-Keyword relevance
+🔍 Keyword relevance
 
 🚀 Local Setup Instructions
 1️⃣ Clone the Repository
@@ -80,20 +85,19 @@ GROQ_API_KEY=your_actual_groq_api_key
 uvicorn main:app --reload
 
 🧪 Example Prompts
-
-Weather
+🌦️ Weather
 
 "What is the weather in London?"
 
 "How is the weather in New York?"
 
-GitHub Search
+🧑‍💻 GitHub Search
 
 "Find top Python repositories for Machine Learning on GitHub"
 
 "Find me a GitHub repo for FastAPI"
 
-Combined Query
+🔀 Combined Query
 
 "How is the weather in New York and find me a GitHub repo for FastAPI?"
 
@@ -117,19 +121,18 @@ Append debug=true:
 http://127.0.0.1:8000/run?query=How is the weather in London?&debug=true
 
 ⚠️ Known Limitations & Tradeoffs
-
-GitHub API Rate Limits
+⏱️ GitHub API Rate Limits
 
 Uses unauthenticated access
 
 Limited to 60 requests/hour per IP
 
-Sequential Execution
+🔁 Sequential Execution
 
 Agent steps run one-by-one
 
 Parallel execution could reduce latency for complex queries
 
-Context Window Constraints
+🧠 Context Window Constraints
 
 Extremely long queries with many subtasks may hit LLM token limits during planning
