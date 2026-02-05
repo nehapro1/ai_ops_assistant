@@ -1,5 +1,5 @@
 import json
-from llm.openai_client import chat
+from llm.groq_client import chat
 
 def plan_task(user_input: str):
     system_prompt = """

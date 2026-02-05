@@ -1,5 +1,5 @@
 import json
-from llm.openai_client import chat
+from llm.groq_client import chat
 
 def verify_and_finalize(user_query, execution_results):
     system_prompt = """
